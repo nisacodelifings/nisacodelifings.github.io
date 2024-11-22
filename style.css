@@ -1,84 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-*, html{
-	font-family: "Fira Code", monospace;
-	color: white;
+/* General Reset and Font */
+*, html {
+    font-family: "Fira Code", monospace;
+    color: white;
 }
 
-h1.name, nav a.active{
-	text-decoration: underline;
+/* Body & Layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: indigo;
+}
+
+.container {
+    width: 40%;
+    padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5em;
+}
+
+.logo > img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo > .username, header > .title {
+    padding: 5px 10px;
+    background: #9d03fc;
+    color: white;
+    font-weight: bold;
+    display: inline;
+    font-size: 14px;
+}
+
+.logo > .username {
+    background: #0000ff;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    grid-gap: 1.5em;
+    margin: 1em 0;
+}
+
+a {
+    color: #ffd369;
+    text-decoration: none;
+}
+
+h1.name, nav a.active {
+    text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-color: hotpink;
 }
 
-p{
-	letter-spacing: normal;
+/* Main Section */
+main {
+    border-left: 10px solid #9d03fc;
+    padding: 0 1em;
 }
 
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: indigo;
+.art img {
+    width: 50%;
+    height: auto;
 }
 
-.container{
-	width: 40%;
-	padding: 1em;
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
 }
 
-.logo{
-	display: flex;
-	align-items: center;
-	grid-gap: 0.5em;
+input, textarea {
+    padding: 10px;
+    background-color: #333;
+    border: 2px solid #9d03fc;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%;
 }
 
-.logo > img{
-	width: 40px;
-	height: 40px;
+input:focus, textarea:focus {
+    outline: none;
+    border-color: hotpink;
+    background-color: #444;
 }
 
-.logo > .username, header > .title{
-	padding: 5px 10px;
-	background: #9d03fc;
-	color: white;
-	font-weight: bold;
-	display: inline;
-	font-size: 14px;
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
-.logo > .username{
-	background: #0000ff;
+button {
+    padding: 10px;
+    background-color: #9d03fc;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-nav{
-	display: flex;
-	grid-gap: 1.5em;
-	margin: 1em 0;
+button:hover {
+    background-color: hotpink;
 }
 
-a{
-	color: #ffd369;
-	text-decoration: none;
+button:focus {
+    outline: none;
 }
 
-main{
-	border-left: 10px solid #9d03fc;
-	padding: 0 1em;
-}
-
-.art img{
-	width: 50%;
-	height: auto;
-}
-
-@media screen and (max-width: 768px){
-	.container{
-		width: 100%;
-	}
-}
-
- .muter {
+/* Animation */
+.muter {
     animation-name: rotate-center;
     animation-duration: 2s;
     animation-timing-function: ease;
@@ -86,14 +137,18 @@ main{
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-fill-mode: none;
-    }
-    @keyframes rotate-center {
+}
+
+@keyframes rotate-center {
     0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
+        transform: rotate(0);
     }
     100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-    }
+}
+
+/* Paragraphs */
+p {
+    letter-spacing: normal;
+}
