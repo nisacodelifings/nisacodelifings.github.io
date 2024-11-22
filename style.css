@@ -117,11 +117,7 @@ button {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: hotpink;
+    margin-bottom: 30px;
 }
 
 button:focus {
