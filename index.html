@@ -70,23 +70,18 @@
 
     <script>
         document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Mencegah reload halaman
+            e.preventDefault();
             alert("Pesan akan dialihkan ke WhatsApp! Terima kasih sudah menghubungi.");
 
-            // Ambil nilai input dari form
             const name = document.querySelector('input[placeholder="Your Name"]').value;
             const email = document.querySelector('input[placeholder="Your Email"]').value;
             const message = document.querySelector('textarea[placeholder="Your Message"]').value;
 
-            // Nomor WhatsApp kamu (pastikan pakai format internasional, contoh: +62 untuk Indonesia)
-            const whatsappNumber = "6289508320163"; // Ganti dengan nomor kamu
-
-            // Rangkai pesan yang akan dikirim
+            const whatsappNumber = "6289508320163";
             const whatsappMessage = `Halo, saya ${name}!\nEmail: ${email}\nPesan: ${message}`;
 
-            // Redirect ke WhatsApp
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, "_blank"); // Membuka di tab baru
+            window.open(whatsappURL, "_blank");
         });
     </script>
 </body>
