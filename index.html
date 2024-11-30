@@ -36,7 +36,7 @@
                 <h2>Portfolio</h2>
                 <ul>
                     <li>UI/UX design <a href="https://dribbble.com/nisacodelifings" target="_blank">Dribbble profile</a>
-                    <li>Pinkielist <a href="https://playful-puffpuff-efd3d3.netlify.app/" target="_blank">Demo</a></li>
+                    <li>Pinkielist <a href="https://phenomenal-panda-32f222.netlify.app/" target="_blank">Demo</a></li>
                     <li>Dzikir Counter <a href="https://dzikircounter.vercel.app/" target="_blank">Demo</a></li>
                 </ul>
             </section>
@@ -58,7 +58,6 @@
                 <h2>Contact Me👋</h2>
                 <form>
                     <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
@@ -74,11 +73,10 @@
             alert("Your message will be redirected to WhatsApp! Thank you for contacting me.");
 
             const name = document.querySelector('input[placeholder="Your Name"]').value;
-            const email = document.querySelector('input[placeholder="Your Email"]').value;
             const message = document.querySelector('textarea[placeholder="Your Message"]').value;
 
             const whatsappNumber = "6289508320163";
-            const whatsappMessage = `Halo, saya ${name}!\nEmail: ${email}\nPesan: ${message}`;
+            const whatsappMessage = `Halo, saya ${name}!\n${message}`;
 
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
             window.open(whatsappURL, "_blank");
