@@ -94,7 +94,7 @@ input, textarea {
     color: white;
     font-size: 14px;
     border-radius: 5px;
-    width: 100%;
+    width: 70%;
 }
 
 input:focus, textarea:focus {
@@ -114,6 +114,7 @@ button {
     color: white;
     border: none;
     font-size: 14px;
+    width: 70%;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
