@@ -94,6 +94,7 @@ input, textarea {
     color: white;
     font-size: 14px;
     border-radius: 5px;
+    width: 100%;
 }
 
 input:focus, textarea:focus {
