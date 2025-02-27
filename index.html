@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>nisacodelifings - index</title>
     <meta property="og:title" content="Hello, there!">
-    <meta property="og:description" content="Annisa Puspitasari's portfolio">
+    <meta property="og:description" content="nisacodelifings's portfolio">
     <meta property="og:url" content="https://nisacodelifings.github.io">
     <meta property="og:image" content="https://res.cloudinary.com/nisacodelifings/image/upload/v1736830738/Screenshot_2025-01-14_115736_pfkkeb.png">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
                 <div class="username">Hello, there!</div>
             </div>
             <h1 class="name">Nisa Codelifings</h1>
-            <div class="title">Freelance Web Designer</div>
+            <div class="title">Freelance Quality Assurance</div>
         </header>
         <nav>
             <div><a href="/" class="active">index/</a></div>
@@ -33,55 +33,47 @@
         </nav>
         <main>
             <h2>Hi, there!</h2>
-            <p>I am Annisa Puspitasari. I can help businesses and individuals create attractive websites.</p>
+            <p>I am Nisa. I help businesses and individuals ensure high-quality applications experiences through thorough testing. </p> 
+            
+            <p>I am <b>open to work on an hourly basis</b> for:</p>
+                <ul>
+                    <li><strong>App Testing & Feedback</strong> – Providing detailed UI/UX feedback to improve your app's usability.</li>
+                    <li><strong>UI Testing</strong> – Checking visual consistency, responsiveness, and accessibility.</li>
+                    <li><strong>Functional & Exploratory Testing</strong> – Finding bugs, testing workflows, and ensuring smooth performance.</li>
+                    <li><strong>User Ability Testing</strong> – Evaluating how real users interact with your app.</li>
+                    <li><strong>Documentation Services</strong> – Writing user guides, test scenarios, and structured test reports.</li>
+                </ul>
+                <p>If you need <strong>manual testing, usability insights, or documentation</strong> for your app, feel free to <a href="#contact">reach out!</a></p>
 
             <h2>Skills</h2>
             <p>Web Design, Graphic Design, UI Development, Quality Assurance</p>
 
-            <h2>Fun Projects</h2>
-            <ul>
-                <li><b>Skulah</b> - My cute E-learning platform UI (Skill: designing UI directly on code) <a
-                        href="https://cozy-nasturtium-0a22b4.netlify.app/" target="_blank">Demo</a></li>
-                <li><b>Instagram</b> - UI clone instagram's dashboard (Skill: CSS layout) <a href="https://elegant-arithmetic-094e2b.netlify.app/" target="_blank">Demo</a></li>
-                <li><b>Simpleazy</b> - My 1st UI development in High School <a href="https://comforting-frangollo-c4f04f.netlify.app/" target="_blank">Demo</a></li>
-            </ul>
-
             <h2>Personal Projects</h2>
             <ul>
-                <li><b>Pinkielist</b> - All in One: To-do List, Note, and Pomodoro app in One Place <a
+                <li><b>Pinkielist</b> - All-in-one To-Do List, Notes, and Pomodoro app <a
                         href="https://phenomenal-panda-32f222.netlify.app/" target="_blank">Demo</a></li>
-                <li><b>Dzikir Counter</b> <a href="https://dzikircounter.vercel.app/" target="_blank">Demo</a></li>
+                <li><b>Dzikir Counter</b> -  Simple digital dhikr counter <a href="https://dzikircounter.vercel.app/" target="_blank">Demo</a></li>
             </ul>
 
             <h2>Portfolio</h2>
             <ul>
                 <li><b>Web Design</b> - Posted on Dribbble <a href="https://dribbble.com/nisacodelifings"
                         target="_blank">nisacodelifings</a>
-                <li><b>Graphic Design</b> - One of My graphic design working at DotErb Solution <a
+                <li><b>Graphic Design</b> - One of my works at DotErb Solution <a
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7183312706156834816"
                         target="_blank">Linkedin</a>
                 </li>
-                <li><b>UI Development</b> - One of My freelance projects <a
+                <li><b>UI Development</b> - Freelance project: Pitakon <a
                         href="https://melodious-syrniki-a70fe1.netlify.app/"
                         target="_blank">Pitakon</a></li>
-                <li><b>Quality Assurance</b> - I've been involved in Legal Application System for <a
-                        href="https://www.btn.co.id/" target="_blank">Bank BTN</a> and etc at DotErb Solution almost 1
-                    year</li>
-            </ul>
-
-            <h2>Education</h2>
-            <ul>
-                <li><b>2021-2025</b> Undergraduate of Bachelor's Degree</li>
-                <li><b>2018-2021</b> <a href="https://www.instagram.com/smknegeri4bandung/" target="_blank">SMKN 4
-                        BANDUNG</a></li>
-                <li><b>2015-2018</b> <a href="https://www.instagram.com/mts_sirnamiskin/" target="_blank">MTS
-                        SIRNAMISKIN</a></li>
+                <li><b>Quality Assurance</b> - Involved in Legal Application System for Bank BTN & other projects at DotErb Solution (SIT, UI validation, manual testing)</li>
             </ul>
 
             <section id="contact">
                 <h2>Contact Me👋</h2>
-                <form>
+                <form id="contactForm">
                     <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
@@ -94,18 +86,19 @@
     <script>
         document.querySelector("form").addEventListener("submit", function (e) {
             e.preventDefault();
-            alert("Your message will be redirected to WhatsApp! Thank you for contacting me.");
-
+    
             const name = document.querySelector('input[placeholder="Your Name"]').value;
+            const email = document.querySelector('input[placeholder="Your Email"]').value;
             const message = document.querySelector('textarea[placeholder="Your Message"]').value;
-
-            const whatsappNumber = "6289508320163";
-            const whatsappMessage = `Halo, saya ${name}!\n${message}`;
-
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, "_blank");
+    
+            const subject = `New Inquiry from ${name}`;
+            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    
+            const mailtoLink = `mailto:annisa.puspitasari@doterb.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
         });
     </script>
+    
 </body>
 
 </html>
