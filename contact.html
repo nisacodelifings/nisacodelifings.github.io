@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="cTpBXofF1cbcKvbGT03UAXeZPcz6Mkl7R12sI8xXIlU" />
     <link rel="shortcut icon" href="https://res.cloudinary.com/do2jhv5ao/image/upload/v1692433593/nisacodelifings.png">
     <link rel="stylesheet" href="style.css">
-    <title>@annisaps83 - index</title>
+    <title>@annisaps83 - Contact</title>
     <meta property="og:title" content="Hello, there!">
     <meta property="og:description" content="@annisaps83's portfolio">
     <meta property="og:url" content="https://annisaps83.github.io">
@@ -21,8 +21,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img class="muter"
-                    src="https://res.cloudinary.com/do2jhv5ao/image/upload/v1692433593/nisacodelifings.png">
+                <img class="muter" src="https://res.cloudinary.com/do2jhv5ao/image/upload/v1692433593/nisacodelifings.png" alt="Logo">
                 <div class="username">Hello, there!</div>
             </div>
             <h1 class="name">@annisaps83</h1>
@@ -30,39 +29,38 @@
         </header>
         <nav>
             <div><a href="index.html">index/</a></div>
-            <div><a href="contact.html"  class="active">contact/</a></div>
+            <div><a href="contact.html" class="active">contact/</a></div>
         </nav>
         <main>
             <section id="contact">
                 <h2>Contact Me👋</h2>
                 <form id="contactForm">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </section>
-
-        </main><br>
+        </main>
+        <br>
         <footer>@annisaps83. ©2018</footer>
     </div>
 
     <script>
         document.querySelector("form").addEventListener("submit", function (e) {
             e.preventDefault();
-    
+            
             const name = document.querySelector('input[placeholder="Your Name"]').value;
             const email = document.querySelector('input[placeholder="Your Email"]').value;
             const message = document.querySelector('textarea[placeholder="Your Message"]').value;
-    
+            
             const subject = `New Inquiry from ${name}`;
             const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    
+            
             const mailtoLink = `mailto:annisa.puspitasari@doterb.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoLink;
         });
     </script>
-    
 </body>
 
 </html>
